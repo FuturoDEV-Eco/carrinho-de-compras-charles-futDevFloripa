@@ -10,6 +10,7 @@ app.use(express.json());
 
 app.use('/api', require('./routes/clients.routes'));
 app.use('/api', require('./routes/products.routes'));
+app.use('/api', require('./routes/orders.routes'));
 
 app.get('/', (req, res) => {
   res.send('O troço rodou! Use o postman para testar as rotas');
