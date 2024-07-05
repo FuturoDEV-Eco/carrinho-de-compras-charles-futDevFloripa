@@ -7,3 +7,19 @@ CREATE TABLE clients (
 );
 
 
+CREATE TABLE categories (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(150) NOT NULL
+);
+
+INSERT INTO categories (name) VALUES 
+('Eletrônicos'),
+('Eletrodomésticos'),
+('Livros'),
+('Móveis'),
+('Roupas'),
+('Brinquedos'),
+('Esportes'),
+('Beleza'),
+('Automotivo'),
+('Alimentos');
