@@ -14,6 +14,16 @@ const ProductController = {
       res.status(500).send('Server Error');
     }
   },
+
+  getAllProducts: async (req, res) => {
+    try {
+      const allProducts = await connection.query('SELECT * FROM products');
+      res.status(200).json(allProducts.rows);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  },
 };
 
 module.exports = ProductController;
