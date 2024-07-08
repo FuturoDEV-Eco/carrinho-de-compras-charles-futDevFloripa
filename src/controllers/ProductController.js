@@ -15,7 +15,6 @@ const ProductController = {
       res.status(500).send('Server Error');
     }
   },
-
   getAllProducts: async (req, res) => {
     try {
       const allProducts = await connection.query('SELECT * FROM products');
